@@ -1,14 +1,12 @@
-import metaship_client
+import tests
 
 
 def run_tests():
-    shops = metaship_client.get_shops()
-    for shop in shops:
-        assert 'id' in shop, "Объект Shop не содержит поля 'id'"
-        assert 'name' in shop, "Объект Shop не содержит поля 'name'"
+    tests.get_shops_test()
+    tests.get_warehouses_test()
+    tests.create_shop_test()
+    print("All tests successfully passed")
 
 
 if __name__ == '__main__':
     run_tests()
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
